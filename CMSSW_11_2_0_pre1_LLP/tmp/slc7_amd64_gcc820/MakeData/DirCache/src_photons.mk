@@ -1,0 +1,2 @@
+ALL_SUBSYSTEMS+=photons
+subdirs_src_photons = src_photons_Analyzer src_photons_stdmodel src_photons_displaced

@@ -1,0 +1,20 @@
+<tool name="cuda" version="10.2.89-bcolbf2">
+  <info url="https://docs.nvidia.com/cuda/index.html"/>
+  <use name="cuda-stubs"/>
+  <lib name="cudart"/>
+  <lib name="cudadevrt"/>
+  <lib name="nvToolsExt"/>
+  <client>
+    <environment name="CUDA_BASE" default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/cuda/10.2.89-bcolbf2"/>
+    <environment name="NVCC"      default="$CUDA_BASE/bin/nvcc"/>
+    <environment name="BINDIR"    default="$CUDA_BASE/bin"/>
+    <environment name="LIBDIR"    default="$CUDA_BASE/lib64"/>
+    <environment name="INCLUDE"   default="$CUDA_BASE/include"/>
+  </client>
+  <flags CUDA_FLAGS="-std=c++14 -O3 --generate-line-info --source-in-ptx --expt-relaxed-constexpr --expt-extended-lambda -gencode arch=compute_35,code=sm_35 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_70,code=sm_70 -Xcudafe --diag_suppress=esa_on_defaulted_function_ignored --cudart shared"/>
+  <flags CUDA_HOST_REM_CXXFLAGS="-std=%"/>
+  <flags CUDA_HOST_REM_CXXFLAGS="%potentially-evaluated-expression"/>
+  <flags CUDA_HOST_CXXFLAGS="-std=c++14"/>
+  <lib name="cudadevrt" type="cuda"/>
+  <runtime name="PATH" value="$CUDA_BASE/bin" type="path"/>
+</tool>
