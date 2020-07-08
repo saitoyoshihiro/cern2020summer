@@ -1,2 +1,0 @@
-ALL_PACKAGES += photons/Analyzer
-subdirs_src_photons_Analyzer := src_photons_Analyzer_plugins src_photons_Analyzer_python

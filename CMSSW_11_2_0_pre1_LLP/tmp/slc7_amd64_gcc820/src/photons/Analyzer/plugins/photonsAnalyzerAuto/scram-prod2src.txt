@@ -1,1 +1,0 @@
-photonsAnalyzerAuto photons/Analyzer/plugins/Analyzer.cc

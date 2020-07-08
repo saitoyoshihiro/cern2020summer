@@ -1,8 +1,0 @@
-<tool name="eigen" version="d812f411c3f9-ghbfee">
-  <client>
-    <environment name="EIGEN_BASE"   default="/cvmfs/cms.cern.ch/slc7_amd64_gcc820/external/eigen/d812f411c3f9-ghbfee"/>
-    <environment name="INCLUDE"      default="$EIGEN_BASE/include/eigen3"/>
-  </client>
-  <runtime name="ROOT_INCLUDE_PATH"  value="$INCLUDE" type="path"/>
-  <flags CPPDEFINES="EIGEN_DONT_PARALLELIZE"/>
-</tool>
